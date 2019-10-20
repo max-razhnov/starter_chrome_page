@@ -25,17 +25,17 @@ function setTitle() {
     hours = date.getHours();
   if (hours < 10) {
     background.style.color = "#000";
-    background.style.background = `url('./roland-hechanova-f372RxIk18U-unsplash.jpg') no-repeat center/ cover`;
+    background.style.background = `url('./src/assets/roland-hechanova-f372RxIk18U-unsplash.jpg') no-repeat center/ cover`;
     title.innerText = "Good morning!";
   } else if (hours < 15) {
-    background.style.background = `url('./arnaud-mariat-VZvWjqh-wJU-unsplash.jpg') no-repeat center/ cover`;
+    background.style.background = `url('./src/assets/arnaud-mariat-VZvWjqh-wJU-unsplash.jpg') no-repeat center/ cover`;
     title.innerText = "Good afternoon!";
   } else if (hours < 22) {
-    background.style.background = `url('./lerone-pieters-XVaXbzQul90-unsplash.jpg') no-repeat center/ cover`;
+    background.style.background = `url('./src/assets/lerone-pieters-XVaXbzQul90-unsplash.jpg') no-repeat center/ cover`;
     title.innerText = "Good evening!";
   } else {
     background.style.color = "rgba(255,255,255,1)";
-    background.style.background = `url('./blake-carpenter-oJbglDa4cO0-unsplash.jpg') no-repeat center/ cover`;
+    background.style.background = `url('./src/assets/blake-carpenter-oJbglDa4cO0-unsplash.jpg') no-repeat center/ cover`;
     title.innerText = "Good night!";
   }
 }
