@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+.body {
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    background: white;
+    width: 100vw;
+    padding-top: 15em;
+}
+
+.time, .date {
+    display: block;
+    text-align: center;
+}
+
+.time {
+    font-size: 6em;
+}
+
+.date {
+    font-size: 1.5em;
+}
+
+.title_name {
+    font-size: 3em;
+    margin: 0;
+    text-align: center;
+}
+
+.title_author {
+    max-width: 30%;
+    cursor: pointer;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 2em;
+}
+
+@media (max-width:768px) {
+    .time {
+        font-size: 4em;
+    }
+    .date {
+        font-size: 1.25em;
+    }
+    .title_name {
+        font-size: 2em;
+    }
+    .title_author {
+        max-width: 90%;
+        font-size: 2em;
+    }
+}
