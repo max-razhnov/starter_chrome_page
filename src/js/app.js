@@ -2,14 +2,16 @@ const time = document.getElementsByClassName("time")[0],
   datePlace = document.getElementsByClassName("date")[0],
   author = document.getElementsByClassName("title_author")[0],
   title = document.getElementsByClassName("title_name")[0],
-  background = document.querySelector("body");
+  background = document.querySelector("body"),
+  AMPMContainer = document.getElementById("amPm");
 function setTime() {
   const date = new Date(),
     hours = 12 - 24 + date.getHours(),
     AMPM = date.getHours() >= 12 ? "PM" : "AM";
-  time.innerText = `${hours}:${addZero(date.getMinutes())}:${addZero(
+  time.innerText = `${addZero(hours)}:${addZero(date.getMinutes())}:${addZero(
     date.getSeconds()
-  )} ${AMPM}`;
+  )}`;
+  AMPMContainer.innerText = AMPM;
   setTimeout(setTime, 1000);
 }
 function addZero(count) {
@@ -28,13 +30,13 @@ function setTitle() {
     background.style.background = `url('./src/assets/roland-hechanova-f372RxIk18U-unsplash.jpg') no-repeat center/ cover`;
     title.innerText = "Good morning!";
   } else if (hours < 15) {
+    background.style.color = "rgba(255,255,255,1)";
     background.style.background = `url('./src/assets/arnaud-mariat-VZvWjqh-wJU-unsplash.jpg') no-repeat center/ cover`;
     title.innerText = "Good afternoon!";
   } else if (hours < 22) {
     background.style.background = `url('./src/assets/lerone-pieters-XVaXbzQul90-unsplash.jpg') no-repeat center/ cover`;
     title.innerText = "Good evening!";
   } else {
-    background.style.color = "rgba(255,255,255,1)";
     background.style.background = `url('./src/assets/blake-carpenter-oJbglDa4cO0-unsplash.jpg') no-repeat center/ cover`;
     title.innerText = "Good night!";
   }

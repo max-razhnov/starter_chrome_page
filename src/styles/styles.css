@@ -11,17 +11,28 @@
     padding-top: 15em;
 }
 
+.body>div {
+    text-align: center;
+}
+
 .time, .date {
     display: block;
     text-align: center;
 }
 
 .time {
+    display: inline-block;
+    max-width: 220px;
+    width: 100%;
     font-size: 6em;
 }
 
 .date {
     font-size: 1.5em;
+}
+
+#amPm {
+    width: fit-content;
 }
 
 .title_name {
